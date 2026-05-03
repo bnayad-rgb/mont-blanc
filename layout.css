@@ -4,6 +4,7 @@
   max-width: 1280px;
   margin: 0 auto;
   padding: 0 16px 80px;
+  overflow-x: hidden;
 }
 
 /* HEADER */
@@ -97,7 +98,8 @@
 
 @media (max-width: 960px) {
   .mb-main { grid-template-columns: 1fr; }
-  .mb-side { order: -1; }
+  /* Keep side panel BELOW the workout content on mobile */
+  .mb-side { order: 1; position: static; }
 }
 
 /* WEEK */
@@ -207,6 +209,8 @@
   align-items: flex-end;
   background: rgba(255, 255, 255, 0.4);
   border-top: 1px dashed var(--line);
+  overflow: hidden;
+  min-width: 0;
 }
 .mb-side-card-pad {
   padding: 14px;
@@ -477,6 +481,13 @@
   .mb-share-days { grid-template-columns: repeat(2, 1fr); }
   .mb-share-stats { grid-template-columns: repeat(2, 1fr); }
   .mb-share-header { flex-direction: column; align-items: flex-start; }
+
+  /* Fix horizontal overflow */
+  .mb-main { overflow-x: hidden; }
+  .mb-side-card { overflow: hidden; }
+  .mb-mountain-cap { padding: 10px 12px; }
+  .mb-summit-band { flex-wrap: wrap; }
+  .mb-summit-meta { font-size: 11px; }
 }
 
 /* Safe area for notched phones */

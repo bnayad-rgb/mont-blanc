@@ -164,9 +164,9 @@ const WorkoutCard = ({ workout, dateISO, log, onUpdate, dense = false, onCelebra
           </div>
 
           {/* Habit loop strip — explicit cue/craving/response/reward */}
-          <div style={{
+          <div className="mb-habit-loop-grid" style={{
             display: "grid",
-            gridTemplateColumns: "repeat(4, 1fr)",
+            gridTemplateColumns: "repeat(auto-fit, minmax(120px, 1fr))",
             gap: 6,
             marginTop: 8,
             fontSize: 11,

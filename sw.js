@@ -1,4 +1,4 @@
-const CACHE_NAME = 'mont-blanc-v1';
+const CACHE_NAME = 'mont-blanc-v2';
 const ASSETS = [
   './',
   './index.html',
